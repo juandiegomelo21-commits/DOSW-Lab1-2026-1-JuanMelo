@@ -8,4 +8,13 @@ public class CarreraParalela {
     public static void main(String[] args) {
         System.out.println("Iniciando carrera...");
     }
+
+    // Lógica del Carril 1: Buscar Máximo
+    public static Integer obtenerMaximo(List<Integer> numeros) {
+        // Lambda para encontrar el maximo
+        Function<List<Integer>, Integer> buscarMax = list -> list.stream()
+                .max(Integer::compareTo)
+                .orElse(0); // Retorna 0 si vacía
+        return buscarMax.apply(numeros);
+    }
 }
