@@ -49,8 +49,11 @@ public class CarreraParalela {
         int min = Integer.parseInt(partes[0].split(":")[1].trim());
         long cant = Long.parseLong(partes[1].split(":")[1].trim());
 
-        // AQUI ESTÁ TU LINEA NUEVA:
-        String val = (max != 0 && 2 % max == 0) ? "El mayor es Divisor de 2" : "El mayor NO es Divisor de 2";
+        // FUSION MANUAL: Combinamos Carril 1 (Múltiplo) y Carril 2 (Divisor)
+        String esMultiplo = (max % 2 == 0) ? "Es Múltiplo" : "No es Múltiplo";
+        String esDivisor  = (max != 0 && 2 % max == 0) ? "Es Divisor" : "No es Divisor";
+
+        String val = esMultiplo + " y " + esDivisor;
 
         return new Resultados(max, min, cant, val);
     }
