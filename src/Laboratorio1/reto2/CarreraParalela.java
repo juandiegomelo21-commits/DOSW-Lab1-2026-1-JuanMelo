@@ -52,8 +52,9 @@ public class CarreraParalela {
         // FUSION MANUAL: Combinamos Carril 1 (Múltiplo) y Carril 2 (Divisor)
         String esMultiplo = (max % 2 == 0) ? "Es Múltiplo" : "No es Múltiplo";
         String esDivisor  = (max != 0 && 2 % max == 0) ? "Es Divisor" : "No es Divisor";
+        String paridad = (cant % 2 != 0) ? "La Cantidad es IMPAR" : "La Cantidad es PAR";
 
-        String val = esMultiplo + " y " + esDivisor;
+        String val = esMultiplo + " y " + esDivisor + " / " + paridad;
 
         return new Resultados(max, min, cant, val);
     }
