@@ -76,3 +76,4 @@ public class CarreraParalela {
         return new Resultados(max, min, cant, validacionFinal);
     }
 }
+
