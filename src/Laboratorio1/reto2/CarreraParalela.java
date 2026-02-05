@@ -17,4 +17,17 @@ public class CarreraParalela {
                 .orElse(0); // Retorna 0 si vacía
         return buscarMax.apply(numeros);
     }
+
+    // Lógica del Carril 2: Buscar Mínimo y Cantidad
+    public static String obtenerMinimoYLongitud(List<Integer> numeros) {
+        // Lambda para encontrar mínimo
+        Function<List<Integer>, Integer> buscarMin = list -> list.stream()
+                .min(Integer::compareTo)
+                .orElse(0);
+
+        Integer minimo = buscarMin.apply(numeros);
+        long cantidad = numeros.size();
+
+        return "Mínimo: " + minimo + ", Total Datos: " + cantidad;
+    }
 }
