@@ -30,4 +30,23 @@ public class CarreraParalela {
 
         return "Mínimo: " + minimo + ", Total Datos: " + cantidad;
     }
+
+    // Clase auxiliar para guardar resultados
+    static class Resultados {
+        int max;
+        int min; // Este campo lo llenaremos después
+        long cantidad;
+        public Resultados(int max, int min, long cantidad) {
+            this.max = max;
+            this.min = min;
+            this.cantidad = cantidad;
+        }
+    }
+
+    // FUNCION CONFLICTIVA - VERSION CARRIL 1
+    public static Resultados procesarLista(List<Integer> numeros) {
+        int max = obtenerMaximo(numeros);
+        // Como soy el Carril 1, aún no sé calcular el mínimo, pongo 0
+        return new Resultados(max, 0, numeros.size());
+    }
 }
