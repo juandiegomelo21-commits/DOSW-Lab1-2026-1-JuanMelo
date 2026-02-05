@@ -30,4 +30,13 @@ public class CarreraParalela {
 
         return "Mínimo: " + minimo + ", Total Datos: " + cantidad;
     }
+
+    // FUNCION CONFLICTIVA - VERSION CARRIL 2
+    public static Resultados procesarLista(List<Integer> numeros) {
+        // Yo soy Carril 2, yo sé sacar el mínimo
+        String[] info = obtenerMinimoYLongitud(numeros).split(":"); // Simulacion rapida
+        int min = Integer.parseInt(info[1].trim().split(",")[0]);
+        // No sé sacar el máximo aún
+        return new Resultados(0, min, numeros.size());
+    }
 }
