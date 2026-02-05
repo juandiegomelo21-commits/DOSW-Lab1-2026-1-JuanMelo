@@ -11,11 +11,13 @@ public class reto4 {
 
     // Lógica Estudiante A: HashMap (Rápido, permite nulos, no sincronizado)
     public static Map<String, Integer> procesarMapa(List<Map.Entry<String, Integer>> entradas) {
-        Map<String, Integer> mapa = new HashMap<>();
+        Map<String, Integer> tabla = new Hashtable<>(); // Cambiamos a Hashtable
         for (Map.Entry<String, Integer> par : entradas) {
-            // "Ignorando claves duplicadas (conserva el primer valor encontrado)"
-            mapa.putIfAbsent(par.getKey(), par.getValue());
+            // Simulamos lógica segura
+            if (par.getKey() != null && par.getValue() != null) {
+                tabla.put(par.getKey(), par.getValue());
+            }
         }
-        return mapa;
+        return tabla;
     }
 }
