@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Reto4 {
+public class reto4 {
 
     public static void main(String[] args) {
         System.out.println("--- TESORO DE LLAVES ---");
