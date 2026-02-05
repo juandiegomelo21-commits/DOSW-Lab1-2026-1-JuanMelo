@@ -7,13 +7,9 @@ public class reto3 {
     }
 
 
-    // Lógica del Estudiante A: Repetir 3 veces con StringBuilder
+    // Lógica del Estudiante B: Invertir texto con StringBuffer
     public static String generarEco(String mensaje) {
-        StringBuilder sb = new StringBuilder();
-        // Simulación simple del builder
-        sb.append(mensaje).append(" ")
-                .append(mensaje).append(" ")
-                .append(mensaje);
-        return sb.toString();
+        StringBuffer sbuffer = new StringBuffer(mensaje);
+        return sbuffer.reverse().toString();
     }
 }
