@@ -4,12 +4,12 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Reto5 {
+public class reto5 {
 
     public static void main(String[] args) {
         System.out.println("--- BATALLA DE CONJUNTOS ---");
 
-      // Datos de prueba del PDF [cite: 342, 343, 344]
+        // Datos de prueba del PDF [cite: 342, 343, 344]
         List<Integer> hashData = Arrays.asList(4, 9, 15, 7, 18, 21, 10, 5);
         List<Integer> treeData = Arrays.asList(12, 3, 25, 10, 7, 30, 18, 4);
 
