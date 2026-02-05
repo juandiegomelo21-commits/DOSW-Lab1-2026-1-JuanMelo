@@ -4,7 +4,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Reto3 {
+public class reto3 {
 
     public static void main(String[] args) {
         System.out.println("--- ECO MISTERIOSO ---");
@@ -30,4 +30,7 @@ public class Reto3 {
 
         return ecoMisterioso.apply(mensaje);
     }
+
+
+
 }

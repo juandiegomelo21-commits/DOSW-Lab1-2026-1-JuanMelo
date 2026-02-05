@@ -11,7 +11,7 @@ public class CarreraParalela {
 
         // La Gran Meta pide probar con dos listados
         List<Integer> lista1 = Arrays.asList(10, 20, 5, 8, 30); // Max 30 (Par, Múltiplo de 2, Cantidad 5 Impar)
-        List<Integer> lista2 = Arrays.asList(3, 7, 1);          // Max 7 (Impar, Cantidad 3 Impar)
+        List<Integer> lista2 = Arrays.asList(3, 7, 1,3,13);          // Max 7 (Impar, Cantidad 3 Impar)
 
         System.out.println("Resultados Lista 1: " + procesarLista(lista1));
         System.out.println("Resultados Lista 2: " + procesarLista(lista2));
@@ -75,5 +75,6 @@ public class CarreraParalela {
 
         return new Resultados(max, min, cant, validacionFinal);
     }
+
 }
 
