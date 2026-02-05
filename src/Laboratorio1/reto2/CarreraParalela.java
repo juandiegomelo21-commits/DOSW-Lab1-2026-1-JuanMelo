@@ -15,6 +15,7 @@ public class CarreraParalela {
         int max;
         int min;
         long cantidad;
+        String validacion; // <--- NUEVO CAMPO
         public Resultados(int max, int min, long cantidad) {
             this.max = max;
             this.min = min;
@@ -39,19 +40,18 @@ public class CarreraParalela {
     }
 
     // LA FUNCION FUSIONADA (Aquí está la magia)
+    // Lógica Exclusiva del CARRIL 2 (Divisor)
     public static Resultados procesarLista(List<Integer> numeros) {
-        // 1. Usamos la lógica del Carril 1
         int max = obtenerMaximo(numeros);
 
-        // 2. Usamos la lógica del Carril 2 (parseando el String que inventamos)
         String info = obtenerMinimoYLongitud(numeros);
-        // El string es "Mínimo: X, Total Datos: Y"
-        // Hacemos una limpieza rápida para sacar los números:
         String[] partes = info.split(",");
         int min = Integer.parseInt(partes[0].split(":")[1].trim());
         long cant = Long.parseLong(partes[1].split(":")[1].trim());
 
-        // 3. Retornamos TODO junto
-        return new Resultados(max, min, cant);
+        // AQUI ESTÁ TU LINEA NUEVA:
+        String val = (max != 0 && 2 % max == 0) ? "El mayor es Divisor de 2" : "El mayor NO es Divisor de 2";
+
+        return new Resultados(max, min, cant, val);
     }
 }
