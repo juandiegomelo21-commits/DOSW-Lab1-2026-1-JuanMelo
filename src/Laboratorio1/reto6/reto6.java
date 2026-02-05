@@ -3,26 +3,26 @@ package Laboratorio1.reto6;
 public class reto6 {
     public static void main(String[] args) {
         System.out.println("--- MÁQUINA DE DECISIONES ---");
-        procesarComando("SALUDAR");
+        procesarComando("BROMEAR");
     }
 
-    // Lógica Estudiante A: Switch con sus comandos
+    // Lógica Estudiante B: Switch con sus comandos (Sobrescribe al A)
     public static void procesarComando(String comando) {
         switch (comando) {
-            case "SALUDAR":
-                System.out.println("¡Saludos, viajero del tiempo y del código!");
+            case "BROMEAR":
+                System.out.println("¿Por qué la RAM rompió con la CPU? Porque necesitaba espacio... 🤡");
                 break;
-            case "DESPEDIR":
-                System.out.println("Que los bits te acompañen, hasta la próxima misión.");
+            case "GRITAR":
+                System.out.println("¡¡¡ALERTA DE STACK OVERFLOW!!! 📢");
                 break;
-            case "CANTAR":
-                System.out.println("01010101 🎵");
+            case "SUSURRAR":
+                System.out.println("Shhh... los bugs están dormidos 🤫");
                 break;
-            case "DANZAR":
-                System.out.println("Girando en modo fiesta 💃");
+            case "ANALIZAR":
+                System.out.println("Analizando datos... resultado: ¡Eres increíble programando! 🧠");
                 break;
             default:
-                System.out.println("Error: Comando no reconocido por la Sección A.");
+                System.out.println("Error: Comando no reconocido por la Sección B.");
         }
     }
 }
